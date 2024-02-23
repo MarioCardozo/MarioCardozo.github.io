@@ -43,18 +43,15 @@ var url = new URL(url_string);
 var tel = url.searchParams.get("tel");
 const btn = document.getElementById('btn');
 var num = '';
-
-btn.addEventListener('click', () => {
-  const link = document.getElementById('link');
+const link = document.getElementById('link');
 	if (tel=="a")
 		num = 5493624220683;
 	else 
 		num = 5493624876121;
-  link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
+link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
 link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-  return false;
-});
+link.setAttribute('rel', 'noopener noreferrer');
+
 
 </script>
 </center>

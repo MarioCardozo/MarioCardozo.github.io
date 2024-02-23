@@ -10,8 +10,20 @@
 <script>
 var url_string = window.location;
 var url = new URL(url_string);
-var name = url.searchParams.get("name");
-var tvid = url.searchParams.get("id");
+var tel = url.searchParams.get("tel");
+const btn = document.getElementById('btn');
+var num = '';
+
+btn.addEventListener('click', () => {
+  const link = document.getElementById('link');
+	if (tel=="a")
+		num = 5493624220683;
+	else 
+		num = 5493624876121;
+  link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
+
+  return false;
+});
 
 </script>
 <style>
@@ -40,7 +52,7 @@ a {
     var vid = document.getElementById('video').play();
 </script>
 	<br/><br/>
-<a href="https://api.whatsapp.com/send?phone=5493624220683&text=Confirmo que asistiré a la fiesta de Luna Luján.">✅ Confirmar asistencia</a><br/><br/>
+<a id="btn" href="#">✅ Confirmar asistencia</a><br/><br/>
 <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AGENDA MI CUMPLEAÑOS - LUNA LUJÁN  EL DIA 22/03/2024 A LAS 18:00hs.&dates=20240322T180000/20240322T210000&sprop=name:Autentia&sf=true&output=xml#eventpage_6">📅 Agendar evento</a><br/><br/>
 <a href="https://maps.google.com/?q=El Principito Pelotero, José Hernández 363, Resistencia, Chaco">🗺 Como llegar</a>
 

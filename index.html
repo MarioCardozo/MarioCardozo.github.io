@@ -7,26 +7,7 @@
 <meta property="og:title" content="Te invito a mi festejar mi primer añito 🎂"?02:08:11 p.m./>
 <meta property="og:image" itemprop="image" content="https://mariocardozo.github.io/tarjeta.png" />
 <meta property="og:description" content="Te espero el día 22/03/2024 a partir de las 18hs"?02:08:11 p.m. />
-<script>
-var url_string = window.location;
-var url = new URL(url_string);
-var tel = url.searchParams.get("tel");
-const btn = document.getElementById('btn');
-var num = '';
 
-btn.addEventListener('click', () => {
-  const link = document.getElementById('link');
-	if (tel=="a")
-		num = 5493624220683;
-	else 
-		num = 5493624876121;
-  link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
-link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-  return false;
-});
-
-</script>
 <style>
 body{
 	background: #ade7e8;
@@ -56,7 +37,26 @@ a {
 <a id="link" href="#">✅ Confirmar asistencia</a><br/><br/>
 <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AGENDA MI CUMPLEAÑOS - LUNA LUJÁN  EL DIA 22/03/2024 A LAS 18:00hs.&dates=20240322T180000/20240322T210000&sprop=name:Autentia&sf=true&output=xml#eventpage_6">📅 Agendar evento</a><br/><br/>
 <a href="https://maps.google.com/?q=El Principito Pelotero, José Hernández 363, Resistencia, Chaco">🗺 Como llegar</a>
+<script>
+var url_string = window.location;
+var url = new URL(url_string);
+var tel = url.searchParams.get("tel");
+const btn = document.getElementById('btn');
+var num = '';
 
+btn.addEventListener('click', () => {
+  const link = document.getElementById('link');
+	if (tel=="a")
+		num = 5493624220683;
+	else 
+		num = 5493624876121;
+  link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
+link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+  return false;
+});
+
+</script>
 </center>
 </body>
 </html>

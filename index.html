@@ -21,7 +21,8 @@ btn.addEventListener('click', () => {
 	else 
 		num = 5493624876121;
   link.href = "https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que asistiré a la fiesta de Luna Luján.";
-
+link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
   return false;
 });
 

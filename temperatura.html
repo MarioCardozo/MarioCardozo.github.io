@@ -13,7 +13,7 @@ color:#FFF;
 background-color:#555;
 }
 .content-slider {
-  width: 100%;
+  width: 90%;
   height: 360px;
   margin-left:75px;
   margin-top:0px;
@@ -322,7 +322,7 @@ var file_xml ='https://api.openweathermap.org/data/2.5/weather?q=Barranqueras,CH
 var xml_dom = getXML_file(file_xml);
 //var ar_city = xml_dom.getElementsByTagName("city"); //gets an Array with all "city" tags
 document.getElementById("T").innerHTML = "T: " + parseFloat(xml_dom.getElementsByTagName("temperature")[0].getAttribute("value")).toFixed(1) + "ºC";
-document.getElementById("ST").innerHTML = "ST: " + parseFloat(xml_dom.getElementsByTagName("feels_like")[0].getAttribute("value")).toFixed(1) + " ºC";
+document.getElementById("ST").innerHTML = "ST: " + parseFloat(xml_dom.getElementsByTagName("feels_like")[0].getAttribute("value")).toFixed(1) + "ºC";
 document.getElementById("H").innerHTML = "H: " + xml_dom.getElementsByTagName("humidity")[0].getAttribute("value") + " %";
 document.getElementById("V").innerHTML = "V: " + parseFloat(xml_dom.getElementsByTagName("wind")[0].getElementsByTagName("speed")[0].getAttribute("value")*3.6).toFixed(0) + " Km/h";
 document.getElementById("P").innerHTML = "P: " + xml_dom.getElementsByTagName("pressure")[0].getAttribute("value") + " hPa";

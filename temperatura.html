@@ -326,6 +326,13 @@ document.getElementById("ST").innerHTML = "ST: " + parseFloat(xml_dom.getElement
 document.getElementById("H").innerHTML = "H: " + xml_dom.getElementsByTagName("humidity")[0].getAttribute("value") + " %";
 document.getElementById("V").innerHTML = "V: " + parseFloat(xml_dom.getElementsByTagName("wind")[0].getElementsByTagName("speed")[0].getAttribute("value")*3.6).toFixed(0) + " Km/h";
 document.getElementById("P").innerHTML = "P: " + xml_dom.getElementsByTagName("pressure")[0].getAttribute("value") + " hPa";
+
+var url_string = window.location;
+var url = new URL(url_string);
+var theme = url.searchParams.get("t");
+var icon = xml_dom.getElementsByTagName("weather")[0].getAttribute("icon")
+document.body.style.backgroundImage = "url('theme/"+ theme + "/" + icon + ".png')";
+  
 </script>
 
 </body>

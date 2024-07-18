@@ -30,7 +30,7 @@ html, body {
 }
 
 #rssText p {
-  margin: 0 40px; /* Ajoute des marges de 40px de chaque côté des titres */
+  margin: 0 20px; /* Ajoute des marges de 40px de chaque côté des titres */
 }
 
 </style>
@@ -53,7 +53,7 @@ function fetchRSS() {
         document.getElementById('rssText').innerHTML = "<p>" + titles.join('</p><p> 📰 </p><p>') + "</p>"; // Utiliser l'entité HTML pour le point médian comme séparateur
         scrollText();
     })
-    .catch(error => console.error('Erreur lors de la récupération du flux RSS :', error));
+    .catch(error => console.error('Error: no se pudieron obtener noticias... ', error));
 }
 
 // JavaScript pour récupérer et faire défiler le flux RSS
@@ -69,7 +69,7 @@ function scrollText() {
     let pos = screenWidth;
 
     function animate() {
-        pos -= 3; // Vous pouvez ajuster la vitesse en modifiant cette valeur
+        pos -= 2; // Vous pouvez ajuster la vitesse en modifiant cette valeur
         element.style.transform = 'translateX(' + pos + 'px)';
         if (pos < -textWidth + screenWidth) {
             pos = screenWidth;

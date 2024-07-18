@@ -1,0 +1,339 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="300" >
+<title>
+</title>
+
+
+<style>
+body{
+margin:0px;
+padding:0px;
+color:#FFF;
+background-color:#555;
+}
+.content-slider {
+  width: 90%;
+  height: 360px;
+  margin-left:100px;
+  margin-top:0px;
+}
+
+.slider {
+  height: 320px;
+  width: 680px;
+  margin: 0 0 0;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 320px;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slider li {
+  width: 680px;
+  height: 320px;
+  position: absolute;
+  top: -125px;
+  list-style: none;
+}
+
+.slider .quote {
+  font-size: 60px;
+  font-style: bold;
+}
+
+.slider .source {
+  font-size: 60px;
+  text-align: right;
+}
+
+.slider li.anim1 {
+  animation: cycle 50s linear infinite;
+}
+
+.slider li.anim2 {
+  animation: cycle2 50s linear infinite;
+}
+
+.slider li.anim3 {
+  animation: cycle3 50s linear infinite;
+}
+
+.slider li.anim4 {
+  animation: cycle4 50s linear infinite;
+}
+
+.slider li.anim5 {
+  animation: cycle5 50s linear infinite;
+}
+
+.slider:hover li {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    top: 0px;
+  }
+  4% {
+    top: 0px;
+  }
+  16% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    top: 125px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    top: -125px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    top: -125px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cycle2 {
+  0% {
+    top: -125px;
+    opacity: 0;
+  }
+  16% {
+    top: -125px;
+    opacity: 0;
+  }
+  20% {
+    top: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: 0px;
+    opacity: 1;
+  }
+  36% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    top: 125px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle3 {
+  0% {
+    top: -125px;
+    opacity: 0;
+  }
+  36% {
+    top: -125px;
+    opacity: 0;
+  }
+  40% {
+    top: 0px;
+    opacity: 1;
+  }
+  44% {
+    top: 0px;
+    opacity: 1;
+  }
+  56% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    top: 125px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle4 {
+  0% {
+    top: -125px;
+    opacity: 0;
+  }
+  56% {
+    top: -125px;
+    opacity: 0;
+  }
+  60% {
+    top: 0px;
+    opacity: 1;
+  }
+  64% {
+    top: 0px;
+    opacity: 1;
+  }
+  76% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    top: 125px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -125px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle5 {
+  0% {
+    top: -125px;
+    opacity: 0;
+  }
+  76% {
+    top: -125px;
+    opacity: 0;
+  }
+  80% {
+    top: 0px;
+    opacity: 1;
+  }
+  84% {
+    top: 0px;
+    opacity: 1;
+  }
+  96% {
+    top: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    top: 125px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+</style>
+
+</head>
+<body style="font-family:sans-serif; text-shadow: 3px 3px 0px #000000; font-stretch: semi-condensed; background-repeat:no-repeat;">
+<div class="content-slider">
+  <div class="slider">
+    <div class="mask" style="">
+      <ul>
+        <li class="anim1">
+          <div class="quote" id="T"></div>
+
+        </li>
+        <li class="anim2">
+          <div class="quote" id="ST"></div>
+
+        </li>
+        <li class="anim3">
+          <div class="quote" id="H"></div>
+
+        </li>
+        <li class="anim4">
+          <div class="quote" id="V"></div>
+
+        </li>
+        <li class="anim5">
+          <div class="quote" id="P"></div>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// Ajax function, gets the content of an xml file and stores it in XML DOM
+function getXML_file(xml_file) {
+  var xhttp = (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');  // XMLHttpRequest object
+
+  // sets and sends the request for calling "xml_file"
+  xhttp.open("GET", xml_file ,false);
+  xhttp.send(null);
+
+  // sets and returns the content as XML DOM
+  xmlDoc = xhttp.responseXML;
+  return xmlDoc;
+}
+
+// XML file address
+var file_xml ='https://api.openweathermap.org/data/2.5/weather?q=Barranqueras,CH,AR,ES&limit=1&appid=9c176cf4bd204957319a1fb2df24ea6b&units=metric&lang=es&mode=xml';
+
+// calls the "getXML_file()" function "file_xml"
+var xml_dom = getXML_file(file_xml);
+//var ar_city = xml_dom.getElementsByTagName("city"); //gets an Array with all "city" tags
+document.getElementById("T").innerHTML = "T: " + parseFloat(xml_dom.getElementsByTagName("temperature")[0].getAttribute("value")).toFixed(1) + "ºC";
+document.getElementById("ST").innerHTML = "ST: " + parseFloat(xml_dom.getElementsByTagName("feels_like")[0].getAttribute("value")).toFixed(1) + "ºC";
+document.getElementById("H").innerHTML = "H: " + xml_dom.getElementsByTagName("humidity")[0].getAttribute("value") + " %";
+document.getElementById("V").innerHTML = "V: " + parseFloat(xml_dom.getElementsByTagName("wind")[0].getElementsByTagName("speed")[0].getAttribute("value")*3.6).toFixed(0) + " Km/h";
+document.getElementById("P").innerHTML = "P: " + xml_dom.getElementsByTagName("pressure")[0].getAttribute("value") + " hPa";
+
+var url_string = window.location;
+var url = new URL(url_string);
+var theme = url.searchParams.get("t");
+var icon = xml_dom.getElementsByTagName("weather")[0].getAttribute("icon")
+document.body.style.backgroundImage = "url('theme/"+ theme + "/" + icon + ".png')";
+  
+</script>
+
+</body>
+</html>

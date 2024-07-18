@@ -46,7 +46,7 @@ let titles;
 let index = 0;
 
 function fetchRSS() {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.infobae.com/feeds/rss/')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml')
     .then(response => response.json())
     .then(data => {
         titles = data.items.map(item => item.title); // Conserver les barres verticales dans les titres RSS

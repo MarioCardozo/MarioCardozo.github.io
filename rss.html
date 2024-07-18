@@ -38,7 +38,7 @@ html, body {
 <body>
 
 <div id="bandeau">
-  <div id="rssText">Chargement du flux RSS en cours...</div>
+  <div id="rssText">Actualizando noticias...</div>
 </div>
 
 <script>
@@ -46,11 +46,11 @@ let titles;
 let index = 0;
 
 function fetchRSS() {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.lapresse.ca/actualites/rss')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.infobae.com/feeds/rss/')
     .then(response => response.json())
     .then(data => {
         titles = data.items.map(item => item.title); // Conserver les barres verticales dans les titres RSS
-        document.getElementById('rssText').innerHTML = "<p>" + titles.join('</p><p> &#8226; </p><p>') + "</p>"; // Utiliser l'entité HTML pour le point médian comme séparateur
+        document.getElementById('rssText').innerHTML = "<p>" + titles.join('</p><p> 📰 </p><p>') + "</p>"; // Utiliser l'entité HTML pour le point médian comme séparateur
         scrollText();
     })
     .catch(error => console.error('Erreur lors de la récupération du flux RSS :', error));

@@ -46,7 +46,7 @@ let titles;
 let index = 0;
 
 function fetchRSS() {
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.diarionorte.com/feed/rss/')
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.lapresse.ca/actualites/rss')
     .then(response => response.json())
     .then(data => {
         titles = data.items.map(item => item.title); // Conserver les barres verticales dans les titres RSS

@@ -58,10 +58,12 @@ var tel = url.searchParams.get("tel");
 const btn = document.getElementById('btn');
 var num = '';
 var link = document.getElementById('link');
-	if (tel=="a")
+	if (tel=="mama")
+		num = 5493624220683;
+	else if (tel=="papa")
 		num = 5493624220683;
 	else 
-		num = 5493624876121;
+		location.href="https://www.google.com.ar";
 link.href ="https://api.whatsapp.com/send?phone="+num+"&text=Confirmo que ire a divertirme a la fiesta de Luna por su segundo cumpleaños.";
 link.setAttribute('target', '_blank');
 link.setAttribute('rel', 'noopener noreferrer');
